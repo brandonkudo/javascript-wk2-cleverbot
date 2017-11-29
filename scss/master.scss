@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Atomic+Age');
+
+.black-text {
+  color: black;
+}
+
+.white-text {
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Atomic Age', cursive;
+  font-size: 80px;
+  margin-bottom: 40px;
+}
+
+#status-text {
+  margin-bottom: 20px;
+}
+
+#input-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 500px !important;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  margin-bottom: 20px;
+}
+
+#output {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 400px;
+  overflow: auto;
+}
+
+.person-1 {
+  color: orange;
+}
+
+.person-2 {
+  color: blue;
+  align-self: flex-end;
+}
