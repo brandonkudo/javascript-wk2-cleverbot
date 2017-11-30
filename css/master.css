@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Atomic+Age");
+@import url("https://fonts.googleapis.com/css?family=Atomic+Age|Roboto+Condensed");
 .black-text {
-  color: black; }
+  animation: text-change 1s ease 0s infinite;
+  opacity: 1; }
 
 .white-text {
-  color: white; }
+  opacity: 0; }
 
 .wrapper {
   display: flex;
@@ -13,7 +14,14 @@
 h1 {
   font-family: 'Atomic Age', cursive;
   font-size: 80px;
+  margin-top: 30px;
   margin-bottom: 40px; }
+
+.up {
+  animation: up 3s ease 0s infinite; }
+
+.down {
+  animation: down 5s ease 0s infinite; }
 
 #status-text {
   margin-bottom: 20px; }
@@ -25,7 +33,15 @@ h1 {
 
 input {
   width: 500px !important;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  background-color: white !important;
+  border: 2px solid grey !important;
+  padding: 20px !important;
+  color: white !important; }
+  input:focus {
+    animation: color-change 10s ease 0s infinite; }
+  input::placeholder {
+    color: black !important; }
 
 .buttons {
   margin-bottom: 20px; }
@@ -35,13 +51,92 @@ input {
   flex-direction: column;
   width: 500px;
   height: 400px;
-  overflow: auto; }
+  overflow: auto;
+  border: 3px solid #74a6f7;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #74a6f7;
+  background-image: url("../../img/robot.png");
+  background-position: center; }
+
+.overlay {
+  background-image: linear-gradient(180deg, red, red);
+  width: 500px;
+  height: 400px; }
 
 .person-1 {
-  color: orange; }
+  color: white;
+  width: 60%;
+  padding: 5px;
+  border: 1px solid #91672f;
+  border-radius: 10px;
+  background-color: #f7af51;
+  box-shadow: 1px 1px 1px #c9cbcc; }
 
 .person-2 {
-  color: blue;
-  align-self: flex-end; }
+  color: white;
+  align-self: flex-end;
+  width: 60%;
+  padding: 5px;
+  border: 1px solid #2c5882;
+  border-radius: 10px;
+  background-color: #4a95db;
+  box-shadow: 1px 1px 1px #c9cbcc; }
+
+@keyframes color-change {
+  0% {
+    background-color: #a5c1ef; }
+  10% {
+    background-color: #cadcf9; }
+  20% {
+    background-color: #a5c1ef; }
+  30% {
+    background-color: #cadcf9; }
+  40% {
+    background-color: #a5c1ef; }
+  50% {
+    background-color: #cadcf9; }
+  60% {
+    background-color: #a5c1ef; }
+  70% {
+    background-color: #cadcf9; }
+  80% {
+    background-color: #a5c1ef; }
+  90% {
+    background-color: #cadcf9; }
+  100% {
+    background-color: #a5c1ef; } }
+@keyframes text-change {
+  0% {
+    color: peachpuff; }
+  10% {
+    color: honeydew; }
+  20% {
+    color: rebeccapurple; }
+  30% {
+    color: lightcoral; }
+  40% {
+    color: aquamarine; }
+  50% {
+    color: forestgreen; }
+  60% {
+    color: lavender; }
+  70% {
+    color: burlywood; }
+  80% {
+    color: cornsilk; }
+  90% {
+    color: chartreuse; }
+  100% {
+    color: mediumaquamarine; } }
+@keyframes up {
+  0% {
+    transform: translateY(-10px); }
+  100% {
+    transform: translateY(10px); } }
+@keyframes down {
+  0% {
+    transform: translateY(10px); }
+  100% {
+    transform: translateY(-10px); } }
 
 /*# sourceMappingURL=master.css.map */
